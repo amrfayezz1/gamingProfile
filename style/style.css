@@ -1,0 +1,158 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+body{
+    background-color: #ddd;
+    padding: 25px;
+}
+
+/* first container */
+.info{
+    display: grid;
+    margin: 20px 0;
+    grid-template-columns: 220px 1fr;
+    flex-wrap: wrap;
+    column-gap: 1px;
+}
+
+.profile{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+/* photo */
+.cover{
+    height: 180px;
+    width: 180px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 20px auto
+}
+
+.me{
+    border-radius: 50%;
+    margin: 5px auto;
+    box-shadow: 0 0 2px #ddd;
+}
+
+/* progress bar */
+.prog-cont{
+    display: flex;
+    margin: 10px auto;
+}
+.progress1{
+    display: inline;
+    height: 15px;
+    width: 150px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: lightseagreen;
+}
+.progress2{
+    display: inline;
+    height: 15px;
+    width: 50px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #ddd;
+}
+
+@media (max-width:500px){
+    .progress1{
+        height:150px;
+        width: 15px;
+    }
+    .progress2{
+        height:150px;
+        width: 15px;
+    }
+}
+
+span{
+    color: lightseagreen;
+    font-weight: bolder;
+}
+
+/* header with pseudo element */
+h2{
+    margin: 25px 10px;
+}
+
+p{
+    margin: 10px;
+    margin-left: 0;
+    line-height: 30px;
+}
+
+.header{
+    position: relative;
+    background-color: white;
+}
+.header::after{
+    content: "140 Days in The Ship";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: lightslategray
+}
+
+/* points log */
+.sector{
+    background-color: white;
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.title{
+    height: 20px;
+    width: 140px;
+    background-color: rgb(3, 3, 54);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+.red{
+    color: purple;
+}
+
+/* trophies */
+.collection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 10px;
+}
+
+img, .card-img1{
+    width: 100%;
+    height: 90px;
+}
+
+.card-img1{
+    background: url(../img/knight.png), linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
+    border-radius: 5px;
+    background-size: cover;
+}
+
+/* powers */
+.powers{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yes{
+    font-weight: 700;
+    color: darkgreen;
+}
+.no{
+    font-weight: 700;
+    color: darkred;
+}
